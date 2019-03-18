@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>vesovaya</title>
+    <!--<link rel="stylesheet" href="../../../vesi_b(old)/angular/src/css/style.css">-->
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but vesovaya doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div class="sidebar">
+      <div class="item">
+        <a href="#"></a>
+        <div class="image">
+          <img src="img/general.png" alt="">
+        </div>
+        <small>Главная</small>
+      </div>
+      <div class="item">
+        <a href="#"></a>
+        <div class="image">
+          <img src="img/weight48.png" alt="">
+        </div>
+        <small>Новое взвешивание</small>
+      </div>
+      <div class="item">
+        <a href="#"></a>
+        <div class="image">
+          <img src="img/catalog48.png" alt="">
+        </div>
+        <small>Справочник</small>
+      </div>
+      <div class="item">
+        <a href="#"></a>
+        <div class="image">
+          <img src="img/journal48.png" alt="">
+        </div>
+        <small>Журнал</small>
+      </div>
+    </div>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <style>
+      .sidebar {
+        position: absolute;
+        width: 100px;
+        left: 0;
+        top: 0;
+        height: 100%;
+        background: #222d32;
+        z-index: 0;
+      }
+      .item{
+        height: auto;
+        text-align: center;
+        display: block;
+        overflow: hidden;
+        padding: 2px;
+      }
+      .item small{
+        margin: auto;
+        color: #b8c7ce;
+      }
+      .item:hover small{
+        color: white;
+      }
+      .item:hover {
+        background: #1e282c;
+        color: white;
+        cursor: pointer;
+      }
+      #app{
+        margin-left: 100px;
+      }
+    </style>
+  </body>
+</html>
