@@ -42,8 +42,8 @@ export default {
   .sidebar {
     position: absolute;
     width: 100px;
-    left: 0;
-    top: 0;
+    /*left: 0;*/
+    /*top: 0;*/
     height: 100%;
     background: #222d32;
     z-index: 0;
