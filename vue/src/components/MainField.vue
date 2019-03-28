@@ -1,16 +1,23 @@
 <template>
   <div class="main-field">
-      <general></general>
+      <component v-bind:is="viewComponent"></component>
   </div>
 </template>
 
 <script>
 import General from "./General.vue";
+import Catalog from "./Catalog";
+import Weight from "./Weight";
+import Journal from "./Journal";
 
 export default {
     name: 'MainField',
+    props: ['viewComponent'],
     components: {
-        General
+        Journal,
+        Weight,
+        Catalog,
+        General,
     },
 }
 </script>

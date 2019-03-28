@@ -1,7 +1,7 @@
 <template>
     <div id="app">
-        <sidebar></sidebar>
-        <main-field></main-field>
+        <sidebar @viewComponent="viewClicked"></sidebar>
+        <main-field :viewComponent="viewTag"></main-field>
     </div>
 </template>
 
@@ -11,9 +11,19 @@
 
     export default {
         name: 'app',
+        data(){
+            return{
+                viewTag: {}
+            }
+        },
         components: {
             MainField,
             Sidebar,
+        },
+        methods:{
+            viewClicked(tag){
+                this.viewTag = tag
+            }
         }
     }
 </script>

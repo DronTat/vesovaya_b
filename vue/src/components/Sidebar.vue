@@ -1,39 +1,52 @@
 <template>
   <div class="sidebar">
-    <div class="item">
-      <a href="#"></a>
+    <div class="item" v-for="item in items" :key="item.id" @click="viewClick(item.component)">
       <div class="image">
-        <img src="img/general.png" alt="">
+        <img v-bind:src="item.picture" alt="">
       </div>
-      <small>Главная</small>
-    </div>
-    <div class="item">
-      <a href="#"></a>
-      <div class="image">
-        <img src="img/weight48.png" alt="">
-      </div>
-      <small>Новое взвешивание</small>
-    </div>
-    <div class="item">
-      <a href="#"></a>
-      <div class="image">
-        <img src="img/catalog48.png" alt="">
-      </div>
-      <small>Справочник</small>
-    </div>
-    <div class="item">
-      <a href="#"></a>
-      <div class="image">
-        <img src="img/journal48.png" alt="">
-      </div>
-      <small>Журнал</small>
+      <small>{{item.name}}</small>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Sidebar',
+    name: 'Sidebar',
+    data(){
+      return{
+          items: [
+              {
+                  id: 1,
+                  name: "Основное",
+                  component: 'general',
+                  picture: "img/general.png"
+              },
+              {
+                  id: 2,
+                  name: "Новое взвешивание",
+                  component: 'weight',
+                  picture: "img/weight48.png"
+              },
+              {
+                  id: 3,
+                  name: "Справочник",
+                  component: 'catalog',
+                  picture: "img/catalog48.png"
+              },
+              {
+                  id: 4,
+                  name: "Журнал",
+                  component: 'journal',
+                  picture: "img/journal48.png"
+              }
+          ]
+      }
+    },
+    methods: {
+        viewClick(tag){
+            this.$emit('viewComponent', tag)
+        }
+    }
 }
 </script>
 
