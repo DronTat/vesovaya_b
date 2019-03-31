@@ -1,6 +1,6 @@
 <template>
   <div class="sidebar">
-    <div class="item" v-for="item in items" :key="item.id" @click="viewClick(item.component)">
+    <div class="item" v-for="item in items" :key="item.id" @click="click(item.component)">
       <div class="image">
         <img v-bind:src="item.picture" alt="">
       </div>
@@ -42,9 +42,9 @@ export default {
           ]
       }
     },
-    methods: {
-        viewClick(tag){
-            this.$emit('viewComponent', tag)
+    methods:{
+        click(tag){
+            this.$router.push('/'+ tag)
         }
     }
 }
