@@ -5,12 +5,24 @@
                 <div class="col-4">
                     <div class="weighting">
                         <div class="weight-val">
-                            <img src="../../public/svg/Seven_Segment_clip_art.svg" height="100%" alt="">
-                            <img src="../../public/svg/Seven_Segment_clip_art.svg" height="100%" alt="">
-                            <img src="../../public/svg/Seven_Segment_clip_art.svg" height="100%" alt="">
-                            <img src="../../public/svg/Seven_Segment_clip_art.svg" height="100%" alt="">
-                            <img src="../../public/svg/Seven_Segment_clip_art.svg" height="100%" alt="">
-                            <img src="../../public/svg/Seven_Segment_clip_art.svg" height="100%" alt="">
+                            <svg height="100">
+                                <use xlink:href="../../public/svg/Seven_Segment_clip_art.svg#svg2221"></use>
+                            </svg>
+                            <svg height="100">
+                                <use xlink:href="../../public/svg/Seven_Segment_clip_art.svg#svg2221"></use>
+                            </svg>
+                            <svg height="100">
+                                <use xlink:href="../../public/svg/Seven_Segment_clip_art.svg#svg2221"></use>
+                            </svg>
+                            <svg height="100">
+                                <use xlink:href="../../public/svg/Seven_Segment_clip_art.svg#svg2221"></use>
+                            </svg>
+                            <svg height="100">
+                                <use xlink:href="../../public/svg/Seven_Segment_clip_art.svg#svg2221"></use>
+                            </svg>
+                            <svg height="100">
+                                <use xlink:href="../../public/svg/Seven_Segment_clip_art.svg#svg2221"></use>
+                            </svg>
                         </div>
                         <div class="weight-button">
                             <div class="row justify-content-between no-gutters">
@@ -68,14 +80,15 @@
     }
     .weight-val{
         /*background-color: #1b1b1b;*/
-        border-radius: 5px;
+        /*border-radius: 5px;*/
         /*border: 2px solid #00aa00;*/
         height: 100px;
-        color: blue;
-        font-size: 250%;
+        width: 65%;
+        /*color: blue;*/
+        /*font-size: 250%;*/
         display: flex;
-        justify-content: center; /*Центрирование по горизонтали*/
-        align-items: center;     /*Центрирование по вертикали */
+        /*justify-content: center; !*Центрирование по горизонтали*!*/
+        /*align-items: center;     !*Центрирование по вертикали *!*/
         margin: 10px auto 10px;
     }
     .weight-button,
