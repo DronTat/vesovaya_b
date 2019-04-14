@@ -83,14 +83,9 @@
         },
         methods: {
             number(array){
-                var temp = [];
-                // array.forEach(function (item) {
-                //     temp.push(this.segment(item));
-                // });
-                array.forEach((item) => {
-                    temp.push(this.segment(item));
+                this.numberSvg = array.map((item) => {
+                    return this.segment(item);
                 });
-                this.numberSvg = temp;
             },
             segment(number) {
                 switch (number){
