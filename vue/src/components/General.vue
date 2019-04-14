@@ -6,22 +6,19 @@
                     <div class="weighting">
                         <div class="weight-val">
                             <svg height="100">
-                                <use xlink:href="../../public/svg/Seven_Segment_clip_art.svg#svg2221"></use>
+                                <use xlink:href="../../public/svg/Seven_Segment_clip_art.svg#svg2221" v-bind:style="numberSvg[4]"></use>
                             </svg>
                             <svg height="100">
-                                <use xlink:href="../../public/svg/Seven_Segment_clip_art.svg#svg2221"></use>
+                                <use xlink:href="../../public/svg/Seven_Segment_clip_art.svg#svg2221" v-bind:style="numberSvg[3]"></use>
                             </svg>
                             <svg height="100">
-                                <use xlink:href="../../public/svg/Seven_Segment_clip_art.svg#svg2221"></use>
+                                <use xlink:href="../../public/svg/Seven_Segment_clip_art.svg#svg2221" v-bind:style="numberSvg[2]"></use>
                             </svg>
                             <svg height="100">
-                                <use xlink:href="../../public/svg/Seven_Segment_clip_art.svg#svg2221"></use>
+                                <use xlink:href="../../public/svg/Seven_Segment_clip_art.svg#svg2221" v-bind:style="numberSvg[1]"></use>
                             </svg>
                             <svg height="100">
-                                <use xlink:href="../../public/svg/Seven_Segment_clip_art.svg#svg2221"></use>
-                            </svg>
-                            <svg height="100">
-                                <use xlink:href="../../public/svg/Seven_Segment_clip_art.svg#svg2221"></use>
+                                <use xlink:href="../../public/svg/Seven_Segment_clip_art.svg#svg2221" v-bind:style="numberSvg[0]"></use>
                             </svg>
                         </div>
                         <div class="weight-button">
@@ -29,7 +26,7 @@
                                 <div class="col bg-success font-weight-bold" id="stable-weight">Стабильный вес</div>
                                 <div class="col-1 border"></div>
                                 <div class="col border">Вес фиксации</div>
-                                <div class="col border">123545</div>
+                                <div class="col border">{{random}}</div>
                             </div>
                             <div class="row align-items-center no-gutters">
                                 <div class="col">
@@ -67,6 +64,122 @@
     export default {
         name: 'General',
         components: {Journal},
+        data(){
+            return{
+                numberSvg: Array,
+            }
+        },
+        computed:{
+            random() {
+                var min = -9999;
+                var max = 99999;
+                min = Math.ceil(min);
+                max = Math.floor(max);
+                var number = String(Math.floor(Math.random() * (max - min + 1)) + min);
+                var arrayNumber = number.split('');
+                this.number(arrayNumber.reverse());
+                return number;
+            },
+        },
+        methods: {
+            number(array){
+                var temp = [];
+                // array.forEach(function (item) {
+                //     temp.push(this.segment(item));
+                // });
+                array.forEach((item) => {
+                    temp.push(this.segment(item));
+                });
+                this.numberSvg = temp;
+            },
+            segment(number) {
+                switch (number){
+                    case '0':
+                        return{
+                            '--segment-1' : 'yellow',
+                            '--segment-2' : 'yellow',
+                            '--segment-3' : 'yellow',
+                            '--segment-4' : 'yellow',
+                            '--segment-5' : 'yellow',
+                            '--segment-6' : 'yellow',
+                        };
+                    case '1':
+                        return{
+                            '--segment-1' : 'yellow',
+                            '--segment-2' : 'yellow'
+                        };
+                    case '2':
+                        return{
+                            '--segment-6' : 'yellow',
+                            '--segment-1' : 'yellow',
+                            '--segment-7' : 'yellow',
+                            '--segment-4' : 'yellow',
+                            '--segment-3' : 'yellow',
+                        };
+                    case '3':
+                        return{
+                            '--segment-6' : 'yellow',
+                            '--segment-7' : 'yellow',
+                            '--segment-1' : 'yellow',
+                            '--segment-2' : 'yellow',
+                            '--segment-3' : 'yellow',
+                        };
+                    case '4':
+                        return{
+                            '--segment-5' : 'yellow',
+                            '--segment-7' : 'yellow',
+                            '--segment-1' : 'yellow',
+                            '--segment-2' : 'yellow',
+                        };
+                    case '5':
+                        return{
+                            '--segment-6' : 'yellow',
+                            '--segment-7' : 'yellow',
+                            '--segment-5' : 'yellow',
+                            '--segment-2' : 'yellow',
+                            '--segment-3' : 'yellow',
+                        };
+                    case '6':
+                        return{
+                            '--segment-6' : 'yellow',
+                            '--segment-7' : 'yellow',
+                            '--segment-5' : 'yellow',
+                            '--segment-2' : 'yellow',
+                            '--segment-3' : 'yellow',
+                            '--segment-4' : 'yellow',
+                        };
+                    case '7':
+                        return{
+                            '--segment-1' : 'yellow',
+                            '--segment-2' : 'yellow',
+                            '--segment-6' : 'yellow',
+                        };
+                    case '8':
+                        return{
+                            '--segment-1' : 'yellow',
+                            '--segment-2' : 'yellow',
+                            '--segment-3' : 'yellow',
+                            '--segment-4' : 'yellow',
+                            '--segment-5' : 'yellow',
+                            '--segment-6' : 'yellow',
+                            '--segment-7' : 'yellow',
+                        };
+                    case '9':
+                        return{
+                            '--segment-1' : 'yellow',
+                            '--segment-2' : 'yellow',
+                            '--segment-3' : 'yellow',
+                            '--segment-5' : 'yellow',
+                            '--segment-6' : 'yellow',
+                            '--segment-7' : 'yellow',
+                        };
+                    case '-':
+                        return{
+                            '--segment-7' : 'yellow',
+                        };
+                }
+            }
+        },
     }
 </script>
 
@@ -74,22 +187,15 @@
 <style scoped>
     .weighting{
         width: 100%;
-        border: 1px solid #4f5a67;
-        border-radius: 3px;
-        background-color: #fff;
+        border: 1px solid white;
+        border-radius: 4px;
+        background: black;
     }
     .weight-val{
-        /*background-color: #1b1b1b;*/
-        /*border-radius: 5px;*/
-        /*border: 2px solid #00aa00;*/
-        height: 100px;
-        width: 65%;
-        /*color: blue;*/
-        /*font-size: 250%;*/
+        height: 120px;
         display: flex;
-        /*justify-content: center; !*Центрирование по горизонтали*!*/
-        /*align-items: center;     !*Центрирование по вертикали *!*/
-        margin: 10px auto 10px;
+        margin: 0 auto;
+        padding: 10px 20%;
     }
     .weight-button,
     .weight-status{

@@ -16,7 +16,9 @@
    sodipodi:docbase="C:\Documents and Settings\jordan\Desktop"
    sodipodi:docname="Seven-segment 8.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
-   sodipodi:modified="true">
+   sodipodi:modified="true"
+   fill="black"
+>
   <defs
      id="defs2223" />
   <sodipodi:namedview
@@ -56,39 +58,40 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-364,-511.86218)">
+     transform="translate(-364,-511.86218)"
+  >
     <path
-       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill: var(--segment-4)"
        d="M 367.52044,533.86218 L 370,536.46684 L 369.98637,545.43388 L 367.49319,547.86218 L 365,545.44745 L 365,536.41257 L 367.52044,533.86218 z "
        id="path2287"
        sodipodi:nodetypes="ccccccc" />
     <path
-       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill: var(--segment-1)"
        d="M 382.52044,516.86218 L 385,519.46684 L 384.98637,528.43388 L 382.49319,530.86218 L 380,528.44745 L 380,519.41257 L 382.52044,516.86218 z "
        id="path3260"
        sodipodi:nodetypes="ccccccc" />
     <path
-       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill: var(--segment-2)"
        d="M 382.52044,533.86218 L 385,536.46684 L 384.98637,545.43388 L 382.49319,547.86218 L 380,545.44745 L 380,536.41257 L 382.52044,533.86218 z "
        id="path3262"
        sodipodi:nodetypes="ccccccc" />
     <path
-       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill: var(--segment-7)"
        d="M 382,532.38262 L 379.39534,534.86218 L 370.4283,534.84855 L 368,532.35537 L 370.41473,529.86218 L 379.44961,529.86218 L 382,532.38262 z "
        id="path3264"
        sodipodi:nodetypes="ccccccc" />
     <path
-       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill: var(--segment-6)"
        d="M 382,515.38262 L 379.39534,517.86218 L 370.4283,517.84855 L 368,515.35537 L 370.41473,512.86218 L 379.44961,512.86218 L 382,515.38262 z "
        id="path3266"
        sodipodi:nodetypes="ccccccc" />
     <path
-       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill: var(--segment-3)"
        d="M 382,549.38262 L 379.39534,551.86218 L 370.4283,551.84855 L 368,549.35537 L 370.41473,546.86218 L 379.44961,546.86218 L 382,549.38262 z "
        id="path3268"
        sodipodi:nodetypes="ccccccc" />
     <path
-       style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       style="fill: var(--segment-5)"
        d="M 367.52044,516.86218 L 370,519.46684 L 369.98637,528.43388 L 367.49319,530.86218 L 365,528.44745 L 365,519.41257 L 367.52044,516.86218 z "
        id="path3270"
        sodipodi:nodetypes="ccccccc" />
