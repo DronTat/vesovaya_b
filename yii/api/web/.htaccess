@@ -1,0 +1,12 @@
+RewriteEngine on
+
+RedirectMatch 404 /\.git
+RedirectMatch 404 /composer\.
+RedirectMatch 404 /.browerrc
+
+# если это папка или файл, открываем его
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# в противном случае перенаправляем на index.php
+RewriteRule . index.php
